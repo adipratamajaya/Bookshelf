@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bookshelf</title>
+    <link rel="stylesheet" href="apps/style/styles.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>bookshelf</h1>
+            <p>Simple bookshelf using HTML, CSS, and Javascript</p>
+        </nav>
+    </header>
+    <main>
+        <div class="input_data">
+            <header>
+                <h2>A simple web application for storing books</h2>
+            </header>
+            <div id="input_books">
+                <form id="input_data_books">
+                    <p>Input your book in web apps</p>
+                    <div class="data_books">
+                        <!-- nama -->
+                        <label for="nama">Name books :</label>
+                        <input type="text" placeholder="Name Books">
+                        <!-- author -->
+                        <label for="author">Author :</label>
+                        <input type="text" placeholder="Author">
+                    </div>
+                    <div class="date_input">
+                        <label for="date">Date input books :</label>
+                        <input type="date">
+                    </div>
+                    <input type="submit" name="submit" id="submit">
+                </form>
+            </div>
+
+        </div>
+        <!-- clear -->
+
+        <div id="bookshelf_data">
+            <div class="bookshelf">
+                <div class="read_book">
+                    <h2>Books that have been read:</h2>
+                    <div id="read_books_">
+
+                    </div>
+                </div>
+                <div class="unread_book">
+                    <h2>Books that have not been read:</h2>
+                    <div id="unread_books_">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <!-- <p>A simple web application for storing books</p> -->
+    </footer>
+</body>
+</html>
