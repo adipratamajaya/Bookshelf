@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 /* media Query */
-/* asgfgdsjfgsdajhgadfhgkjf */
 
 /* color */
 :root {
@@ -14,35 +13,6 @@
     --color-text: #F7EEBB;
     --font-web : Roboto;
 }
-/* bookshelf */
-#bookshelf_data {
-    font-family: var(--font-web);
-}
-.bookshelf {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    gap: 5px;
-}
-/* read_books */
-.read_book {
-    border: 2px solid black;
-}
-.read_book h2{
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: 500;
-}
-/* unread_books */
-.unread_book {
-    border: 2px solid black;
-}
-.unread_book h2 {
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: 500;
-}
-
 /* input */
 #input_books {
     width: 300px;

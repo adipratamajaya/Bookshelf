@@ -25,44 +25,32 @@
             <div id="input_books">
                 <form id="input_data_books">
                     <p>Input your book in web apps</p>
+                    <div id="ex_______"></div>
                     <div class="data_books">
                         <!-- nama -->
                         <label for="nama">Name books :</label>
-                        <input type="text" placeholder="Name Books">
+                        <input type="text" placeholder="Name Books" id="nameBooks">
                         <!-- author -->
                         <label for="author">Author :</label>
-                        <input type="text" placeholder="Author">
+                        <input type="text" placeholder="Author" id="authorBooks">
                     </div>
                     <div class="date_input">
                         <label for="date">Date input books :</label>
-                        <input type="date">
+                        <input type="date" id="dateBooks">
                     </div>
-                    <input type="submit" name="submit" id="submit">
+                    <input type="button" name="submit" id="submit" onabort="submiteBtn()">
                 </form>
             </div>
 
         </div>
         <!-- clear -->
+        <div id="input_datanya">
 
-        <div id="bookshelf_data">
-            <div class="bookshelf">
-                <div class="read_book">
-                    <h2>Books that have been read:</h2>
-                    <div id="read_books_">
-
-                    </div>
-                </div>
-                <div class="unread_book">
-                    <h2>Books that have not been read:</h2>
-                    <div id="unread_books_">
-
-                    </div>
-                </div>
-            </div>
         </div>
     </main>
     <footer>
         <!-- <p>A simple web application for storing books</p> -->
     </footer>
 </body>
+<script src="/apps/js/script.js"></script>
 </html>
