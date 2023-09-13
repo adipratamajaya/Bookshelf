@@ -27,9 +27,19 @@
 .read_book {
     border: 2px solid black;
 }
+.read_book h2{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
 /* unread_books */
 .unread_book {
     border: 2px solid black;
+}
+.unread_book h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
 }
 
 /* input */
