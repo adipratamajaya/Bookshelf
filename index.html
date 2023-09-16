@@ -25,18 +25,20 @@
                     <div class="data_books">
                         <!-- nama -->
                         <label for="nama">Name books :</label>
-                        <input type="text" placeholder="Name Books" id="nameBooks" required autofocus minlength="1" autocomplete="off">
+                        <input type="text" placeholder="Name Books" id="nameBooks" name="nameBooks" required autofocus minlength="1" autocomplete="off">
                         <!-- author -->
                         <label for="author">Author :</label>
-                        <input type="text" placeholder="Author" id="authorBooks" required minlength="1" autocomplete="off">
+                        <input type="text" placeholder="Author" id="authorBooks" name="authorBooks" required minlength="1" autocomplete="off">
                     </div>
                     <div class="date_input">
                         <label for="date">Date input books :</label>
-                        <input type="date" id="dateBooks" required>
+                        <input type="date" id="dateBooks" name="dateBooks" required>
                     </div>
+                    <div class="readBooksCek">
                         <!-- read or unread -->
-                        <label for="readBooks">Already read</label>
-                        <input type="checkbox">
+                        <label for="readBooksCek_">this book has been read?</label>
+                        <input type="checkbox" id="readBooksCek_" name="readBooksCek_">
+                    </div>
                     <input type="submit" name="submit" id="submit">
                 </form>
             </div>
