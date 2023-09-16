@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
  
 function addBooks () {
    const nameBooks = document.getElementById("nameBooks").value;
-   const authorBooks = document.getElementById("authorBooks").value;
+   const authorBooks = document.getElementById("authorBooks").value; 
    const dateBooks = document.getElementById("dateBooks").value;
 
    const booksdata = buildData(nameBooks, authorBooks, dateBooks, false);
@@ -25,16 +25,46 @@ function addBooks () {
 
 }
 
-function buildData(name, author, date, unReadBooks){
+function buildData(name, author, date, readBooks){
 
    return {
       name,
       author,
       date,
-      unReadBooks
+      readBooks
    }
 }
 
+function makeBooks(booksData) {
+  const namaBooks = document.createElement('h2');
+  namaBooks.innerText = booksData.name;
+ 
+  const nameAuthor = document.createElement('p');
+  nameAuthor.innerText = booksData.author;
+
+  const dateBooks = document.createElement('p');
+  dateBooks.innerText = booksData.date;
+ 
+  const booksContainer = document.createElement('div');
+  booksContainer.classList.add('booksItem');
+  booksContainer.append(namaBooks, nameAuthor, dateBooks);
+
+  const container = document.createElement('div');
+  container.classList.add('container_box');
+  container.append(booksContainer);
+ 
+  return container;
+
+}
+
 document.addEventListener(books_RENDER, function () {
-  console.log(arrayBooks);
+  const uncompletedTODOList = document.getElementById('booksUnread');
+
+  for (const todoItem of arrayBooks) {
+    const todoElement = makeBooks(todoItem);
+
+    if (!todoItem.isCompleted) {
+      uncompletedTODOList.append(todoElement);
+    }
+  }
 });
