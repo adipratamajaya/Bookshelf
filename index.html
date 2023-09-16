@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bookshelf</title>
     <link rel="stylesheet" href="apps/style/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,17 +25,31 @@
                     <div class="data_books">
                         <!-- nama -->
                         <label for="nama">Name books :</label>
-                        <input type="text" placeholder="Name Books" id="nameBooks">
+                        <input type="text" placeholder="Name Books" id="nameBooks" required autofocus minlength="1" autocomplete="off">
                         <!-- author -->
                         <label for="author">Author :</label>
-                        <input type="text" placeholder="Author" id="authorBooks">
+                        <input type="text" placeholder="Author" id="authorBooks" required minlength="1" autocomplete="off">
                     </div>
                     <div class="date_input">
                         <label for="date">Date input books :</label>
-                        <input type="date" id="dateBooks">
+                        <input type="date" id="dateBooks" required>
                     </div>
+                        <!-- read or unread -->
+                        <label for="readBooks">Already read</label>
+                        <input type="checkbox">
                     <input type="submit" name="submit" id="submit">
                 </form>
+            </div>
+        </div>
+
+        <!-- books read an unread -->
+        <div class="container">
+            <div class="container_box" id="booksUnread">
+
+            </div>
+            </div>
+            <div class="container_box" id="booksRead">
+
             </div>
         </div>
     </main>
