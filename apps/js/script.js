@@ -1,22 +1,40 @@
-const submitAction = document.getElementById('submit');
+const arrayBooks = [];
+const books_RENDER = 'render-books';
 
+document.addEventListener('DOMContentLoaded', function () {
+   const submitBooks = document.getElementById('input_data_books');
+
+   submitBooks.addEventListener('submit', function (event) {
+
+     event.preventDefault();
+     addBooks();
+
+   });
+ });
 
  
-submitAction.addEventListener('click', () => {
-   const namaBooks = document.querySelector('#nameBooks').value
-   const authorBooks = document.querySelector("#authorBooks").value
-   const dateBooks = document.querySelector("#dateBooks").value
+function addBooks () {
+   const nameBooks = document.getElementById("nameBooks").value;
+   const authorBooks = document.getElementById("authorBooks").value;
+   const dateBooks = document.getElementById("dateBooks").value;
 
-   const newData = `<div>
-                                <h1>${namaBooks}</h1>
-                                <p>${authorBooks}</p>
-                                <p>${dateBooks}</p>
-                            </div>`;
+   const booksdata = buildData(nameBooks, authorBooks, dateBooks, false);
+   arrayBooks.push(booksdata);
 
-   const books = document.querySelector("#input_datanya");
+     document.dispatchEvent(new Event(books_RENDER));
 
-   books.innerHTML = newData;
+}
 
-   return
+function buildData(name, author, date, unReadBooks){
 
+   return {
+      name,
+      author,
+      date,
+      unReadBooks
+   }
+}
+
+document.addEventListener(books_RENDER, function () {
+  console.log(arrayBooks);
 });

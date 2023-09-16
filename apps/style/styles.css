@@ -3,7 +3,6 @@
     margin: 0;
     box-sizing: border-box;
 }
-/* media Query */
 
 /* color */
 :root {
@@ -13,6 +12,10 @@
     --color-text: #F7EEBB;
     --font-web : Roboto;
 }
+
+/*  */
+
+/* ========== */
 /* input */
 #input_books {
     width: 300px;
@@ -44,6 +47,7 @@
     border: none;
     height: 30px;
 }
+
 /* date input */
 .date_input {
     display: flex;
@@ -64,6 +68,7 @@
     padding: 5px;
     margin-bottom: 10px;
 }
+
 /* btn submit */
 #submit {
     border-radius: 5px;
@@ -80,8 +85,9 @@
     background-color: var(--color-text);
     color: var(--color-bg);
 }
+
 /* froms input books */
-.input_data {
+.container {
     display: flex;
     gap: 15px;
     flex-direction: column;
@@ -89,7 +95,7 @@
     align-items: center;
     padding: 20px;
 }
-.input_data h2 {
+.container h2 {
     padding-bottom: 10px;
     font-size: 1.2rem;
     color: var(--color-bg);
@@ -109,7 +115,7 @@
 }
 
 /* navigasi */
-nav {
+header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -118,14 +124,13 @@ nav {
     background-color: var(--color-bg);
     color: var(--color-text);
 }
-nav h1 {
+header h1 {
     font-size: 1.2rem;
     font-weight: 500;
     text-transform: uppercase;
 }
-nav p {
+header p {
     font-size: 0.8rem;
     font-style: italic;
     font-weight: 300;
 }
-/* === */
