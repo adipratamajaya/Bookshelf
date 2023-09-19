@@ -1,7 +1,16 @@
 const arrayBooks = [];
 const books_RENDER = 'render-books';
 
+// local Storage
+const SAVED_EVENT = 'saved-array';
+const STORAGE_KEY = 'BOOKS_WEB';
+
 document.addEventListener('DOMContentLoaded', function () {
+
+   if (isStorageExist()) {
+      loadDataFromStorage();
+    }
+
    const submitBooks = document.getElementById('input_data_books');
 
    submitBooks.addEventListener('submit', function (event) {
@@ -27,6 +36,7 @@ function addBooks () {
 
    
   document.dispatchEvent(new Event(books_RENDER));
+  saveData();
 
 }
 
@@ -147,6 +157,7 @@ function unReadBookShelf (makeBooks) {
   
    booksItems.readBooks = true;
    document.dispatchEvent(new Event(books_RENDER));
+   saveData();
 }
 
 
@@ -169,6 +180,7 @@ function removeBooksShelft(array) {
   
    arrayBooks.splice(todoTarget, 1);
    document.dispatchEvent(new Event(books_RENDER));
+   saveData();
  }
 
 //  index finde batch
@@ -180,4 +192,38 @@ function removeBooksShelft(array) {
    }
   
    return -1;
+ }
+
+//  local storage
+ document.addEventListener(SAVED_EVENT, function () {
+   console.log(localStorage.getItem(STORAGE_KEY));
+ });
+
+ function saveData() {
+   if (isStorageExist()) {
+     const parsed = JSON.stringify(arrayBooks);
+     localStorage.setItem(STORAGE_KEY, parsed);
+     document.dispatchEvent(new Event(SAVED_EVENT));
+   }
+ }
+
+ function isStorageExist() {
+   if (typeof (Storage) === undefined) {
+     alert('bowser does not support!');
+     return false;
+   }
+   return true;
+ }
+
+ function loadDataFromStorage() {
+   const serializedData = localStorage.getItem(STORAGE_KEY);
+   let data = JSON.parse(serializedData);
+  
+   if (data !== null) {
+     for (const books of data) {
+       arrayBooks.push(books);
+     }
+   }
+  
+   document.dispatchEvent(new Event(books_RENDER));
  }
