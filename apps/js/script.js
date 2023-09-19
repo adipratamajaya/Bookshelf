@@ -18,22 +18,30 @@ function addBooks () {
    const authorBooks = document.getElementById("authorBooks").value; 
    const dateBooks = document.getElementById("dateBooks").value;
    const unOrRead = document.getElementById("readvcek_").checked;
+   const batchBooksSerial= batchBooks();
 
-   const booksdata = buildData(nameBooks, authorBooks, dateBooks, unOrRead);
+   const booksdata = buildData(nameBooks, authorBooks, dateBooks, unOrRead, batchBooksSerial);
    arrayBooks.push(booksdata);
+
+   console.log(booksdata);
 
    
   document.dispatchEvent(new Event(books_RENDER));
 
 }
 
-function buildData(name, author, date, readBooks){
+function batchBooks() {
+   return +new Date();
+ }
+
+function buildData(name, author, date, readBooks, batchBooks){
 
    return {
       name,
       author,
       date,
-      readBooks
+      readBooks,
+      batchBooks,
    }
 }
 
@@ -58,11 +66,20 @@ function makeBooks(booksData) {
 
    if( booksData.readBooks == true){
 
-      const btnTrash = document.createElement("i");
-      btnTrash.classList.add('fa-solid', 'fa-trash', 'fa-lg');
+      const btnTrash = document.createElement("button");
+      btnTrash.classList.add('fa-solid', 'fa-trash', 'fa-lg', 'trash_actn');
+      // action
+      btnTrash.addEventListener("click", function(){
+         removeBooksShelft(booksData);
+      })
 
-      const rightBtn = document.createElement("i");
-      rightBtn.classList.add('fa-solid', 'fa-right-to-bracket', 'fa-lg');
+
+      const rightBtn = document.createElement("button");
+      rightBtn.classList.add("fa-solid", "fa-arrow-right", "fa-lg","right_ctn");
+      // action
+      rightBtn.addEventListener("click", function() {
+         readBookShelf(booksData);
+      })
 
       const divBtn = document.createElement('div');
       divBtn.classList.add('btn_books');
@@ -70,7 +87,24 @@ function makeBooks(booksData) {
       container.append(divBtn);
 
    } else {
-      console.log("btn belum di buat")
+      const btnTrash = document.createElement("button");
+      btnTrash.classList.add('fa-solid', 'fa-trash', 'fa-lg','trash_actn');
+      // action {
+         btnTrash.addEventListener("click", function () {
+            removeBooksShelft(booksData);
+         })
+
+      const leftBtn = document.createElement("button");
+      leftBtn.classList.add("fa-solid", "fa-arrow-left", "fa-lg","left_actn");
+      // action {
+         leftBtn.addEventListener("click", function () {
+            unReadBookShelf(booksData);
+         })
+
+      const divBtn = document.createElement('div');
+      divBtn.classList.add('btn_books');
+      divBtn.append(btnTrash, leftBtn);
+      container.append(divBtn);
    }
    
   return container;
@@ -93,3 +127,57 @@ document.addEventListener(books_RENDER, function () {
     }
 
  });
+
+//  action buttton 
+
+function readBookShelf (makeBooks) {
+   const booksItems = findeBooks(makeBooks);
+ 
+   if (booksItems == null) return;
+  
+   booksItems.readBooks = false;
+   document.dispatchEvent(new Event(books_RENDER));
+
+}
+
+function unReadBookShelf (makeBooks) {
+   const booksItems = findeBooks(makeBooks);
+ 
+   if (booksItems == null) return;
+  
+   booksItems.readBooks = true;
+   document.dispatchEvent(new Event(books_RENDER));
+}
+
+
+// finde books
+function findeBooks(readBooks){
+
+   for (const booksitems_ of arrayBooks) {
+      if (booksitems_ === readBooks) {
+
+        return booksitems_;
+      }
+    }
+    return null;
+}
+
+function removeBooksShelft(array) {
+   const todoTarget = findTodoIndex(array);
+  
+   if (todoTarget === -1) return;
+  
+   arrayBooks.splice(todoTarget, 1);
+   document.dispatchEvent(new Event(books_RENDER));
+ }
+
+//  index finde batch
+ function findTodoIndex(array) {
+   for (const index in arrayBooks) {
+     if (arrayBooks[index].name === array.name) {
+       return index;
+     }
+   }
+  
+   return -1;
+ }

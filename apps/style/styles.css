@@ -24,6 +24,7 @@
     padding: 10px;
 }
 .readBooks___ {
+    height: fit-content;
     width: 40%;
     background-color: var(--color-bg);
     color: #F7EEBB;
@@ -31,11 +32,12 @@
     padding: 15px;
 }
 .unReadBooks_____ {
+    height: fit-content;
     width: 40%;
     background-color: var(--color-bg);
     color: #F7EEBB;
     border-radius: 10px;
-    padding: 10px;
+    padding: 15px;
 }
 .container_box_ {
     display: flex;
@@ -58,13 +60,16 @@
     display: flex;
     gap: 10px;
 }
-.btn_books i {
-    cursor: pointer;
+.btn_books button {
+    color: var(--color-text);
     font-size: 30px;
+    border: none;
+    background-color: rgba(240, 248, 255, 0);
+    cursor: pointer;
 }
-.btn_books i:hover {
+.btn_books button:hover {
     color: var(--color-scond);
-    transition: 0.5 ease-in;
+    cursor: pointer;
 }
 
 /* ========== */
