@@ -20,6 +20,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
    });
  });
+ document.addEventListener(SAVED_EVENT, function () {
+  console.log(localStorage.getItem(STORAGE_KEY));
+  
+});
 
  
 function addBooks () {
@@ -147,6 +151,7 @@ function readBookShelf (makeBooks) {
   
    booksItems.readBooks = false;
    document.dispatchEvent(new Event(books_RENDER));
+   saveData();
 
 }
 
@@ -195,9 +200,6 @@ function removeBooksShelft(array) {
  }
 
 //  local storage
- document.addEventListener(SAVED_EVENT, function () {
-   console.log(localStorage.getItem(STORAGE_KEY));
- });
 
  function saveData() {
    if (isStorageExist()) {
