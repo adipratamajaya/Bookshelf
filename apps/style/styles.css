@@ -14,6 +14,58 @@
 }
 
 /*  */
+/* ====== */
+/* read or Unread */
+.container_books_ {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px;
+}
+.readBooks___ {
+    width: 40%;
+    background-color: var(--color-bg);
+    color: #F7EEBB;
+    border-radius: 10px;
+    padding: 15px;
+}
+.unReadBooks_____ {
+    width: 40%;
+    background-color: var(--color-bg);
+    color: #F7EEBB;
+    border-radius: 10px;
+    padding: 10px;
+}
+.container_box_ {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: var(--color-frist);
+    color: #F7EEBB;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+}
+/* items books */
+.booksItem {
+    padding: 10px;
+}
+.btn_books {
+    display: flex;
+    gap: 10px;
+}
+.btn_books i {
+    cursor: pointer;
+    font-size: 30px;
+}
+.btn_books i:hover {
+    color: var(--color-scond);
+    transition: 0.5 ease-in;
+}
 
 /* ========== */
 /* input */
