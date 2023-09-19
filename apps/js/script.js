@@ -17,11 +17,13 @@ function addBooks () {
    const nameBooks = document.getElementById("nameBooks").value;
    const authorBooks = document.getElementById("authorBooks").value; 
    const dateBooks = document.getElementById("dateBooks").value;
+   const unOrRead = document.getElementById("readvcek_").checked;
 
-   const booksdata = buildData(nameBooks, authorBooks, dateBooks, false);
+   const booksdata = buildData(nameBooks, authorBooks, dateBooks, unOrRead);
    arrayBooks.push(booksdata);
 
-     document.dispatchEvent(new Event(books_RENDER));
+   
+  document.dispatchEvent(new Event(books_RENDER));
 
 }
 
@@ -36,6 +38,7 @@ function buildData(name, author, date, readBooks){
 }
 
 function makeBooks(booksData) {
+
   const namaBooks = document.createElement('h2');
   namaBooks.innerText = booksData.name;
  
@@ -50,21 +53,43 @@ function makeBooks(booksData) {
   booksContainer.append(namaBooks, nameAuthor, dateBooks);
 
   const container = document.createElement('div');
-  container.classList.add('container_box');
+  container.classList.add('container_box_');
   container.append(booksContainer);
- 
+
+   if( booksData.readBooks == true){
+
+      const btnTrash = document.createElement("i");
+      btnTrash.classList.add('fa-solid', 'fa-trash', 'fa-lg');
+
+      const rightBtn = document.createElement("i");
+      rightBtn.classList.add('fa-solid', 'fa-right-to-bracket', 'fa-lg');
+
+      const divBtn = document.createElement('div');
+      divBtn.classList.add('btn_books');
+      divBtn.append(btnTrash, rightBtn);
+      container.append(divBtn);
+
+   } else {
+      console.log("btn belum di buat")
+   }
+   
   return container;
 
 }
-
 document.addEventListener(books_RENDER, function () {
-  const uncompletedTODOList = document.getElementById('booksUnread');
+   const readBooks = document.getElementById('readBooks');
+   readBooks.innerHTML = '';
 
-  for (const todoItem of arrayBooks) {
-    const todoElement = makeBooks(todoItem);
+   const unReadBooks = document.getElementById('unReadBooks');
+   unReadBooks.innerHTML = '';
+  
+   for (const booksItems of arrayBooks) {
+      const booksElemnts = makeBooks(booksItems);
 
-    if (!todoItem.isCompleted) {
-      uncompletedTODOList.append(todoElement);
+      if (booksItems.readBooks == true)
+        readBooks.append(booksElemnts);
+      else
+        unReadBooks.append(booksElemnts);
     }
-  }
-});
+
+ });
