@@ -1,16 +1,16 @@
 # Bookshelft Web Apps
 
-sebuah web sederhana untuk memasukan buku ke rak buku, ada 2 rak buku yang pertama buku yang telah di baca dan yang ke dua buku yang belum di baca.
+A simple web to organize books into bookshelves, there are 2 bookshelves: the first is for books that have been read and the second is for books that have not been read.
 
 ![Alt text](apps/images/Web/web_apps.png)
 
 ## Teknologi
 
-Web ini di buat menggunakan HTML, CSS, Dan Javascript. Bisa menyipan data di local storage ketika di refresh data akan tersimpan di lokal storage dan data yang telah di input akan ada kembali.
+This web is created using HTML, CSS, and Javascript. It can store data in local storage so that when the page is refreshed, the stored data will still be available. Any inputted data will be saved and appear again.
 
 ## Latar Belakang
 
-ini adalah tugas sumbission dari kelas Dicoding (Belajar Membuat Front-End Web untuk Pemula)
+This is a summary assignment from the Dicoding class (Learning to Create a Front-End Web for Beginners)
 
 ## License
 
