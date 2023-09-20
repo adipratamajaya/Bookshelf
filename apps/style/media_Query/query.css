@@ -1,0 +1,49 @@
+/* Tablet */
+@media (max-width:768px) {
+
+    /* main */
+    main {
+        padding: 0;
+    }
+    
+}
+
+/* mobile */ 
+@media (max-width:480px) {
+
+    /* header */
+    header {
+        flex-direction: column;
+    }
+    /* main */ 
+    body main {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 20px;
+        height: fit-content;
+        padding-bottom: 129px;
+    }
+    main .container {
+        width: 100%;
+    }
+    main .container_books_ {
+        width: 100%;
+        padding: 15px 0px;
+    }
+    main .container_books_ .readBooks___{
+        width: 100%;
+    }
+    main .container_books_ .unReadBooks_____{
+        width: 100%;
+    }
+    main .container_books_ h2 {
+        font-size: 1rem;
+    }
+
+    footer {
+        gap: 10px;
+        flex-direction: column;
+        text-align: center;
+    }
+   
+}
