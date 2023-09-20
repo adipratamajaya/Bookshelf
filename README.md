@@ -14,8 +14,6 @@ ini adalah tugas sumbission dari kelas Dicoding (Belajar Membuat Front-End Web u
 
 ## License
 
-[MIT](/apps/MIT%20License.txt)
-
 ## 🔗 Contact
 
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://adipratamajaya.github.io/)
