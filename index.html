@@ -5,64 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bookshelf</title>
     <link rel="stylesheet" href="apps/style/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header>
-        <nav>
             <h1>bookshelf</h1>
             <p>Simple bookshelf using HTML, CSS, and Javascript</p>
-        </nav>
     </header>
     <main>
-        <div class="input_data">
-            <header>
-                <h2>A simple web application for storing books</h2>
-            </header>
+        <div class="container">
+            <h2>A simple web application for storing books</h2>
             <div id="input_books">
                 <form id="input_data_books">
                     <p>Input your book in web apps</p>
                     <div class="data_books">
                         <!-- nama -->
                         <label for="nama">Name books :</label>
-                        <input type="text" placeholder="Name Books">
+                        <input type="text" placeholder="Name Books" id="nameBooks" name="nameBooks" required autofocus minlength="1" autocomplete="off">
                         <!-- author -->
                         <label for="author">Author :</label>
-                        <input type="text" placeholder="Author">
+                        <input type="text" placeholder="Author" id="authorBooks" name="authorBooks" required minlength="1" autocomplete="off">
                     </div>
                     <div class="date_input">
                         <label for="date">Date input books :</label>
-                        <input type="date">
+                        <input type="date" id="dateBooks" name="dateBooks" required>
+                    </div>
+                    <div class="readBooksCek">
+                        <!-- read or unread -->
+                        <label for="readvcek_">Read?</label>
+                        <input type="checkbox" id="readvcek_" name="readvcek_">
                     </div>
                     <input type="submit" name="submit" id="submit">
                 </form>
             </div>
-
         </div>
-        <!-- clear -->
 
-        <div id="bookshelf_data">
-            <div class="bookshelf">
-                <div class="read_book">
-                    <h2>Books that have been read:</h2>
-                    <div id="read_books_">
-
-                    </div>
+        <!-- books read an unread -->
+        <div class="container_books_">
+            <div class="readBooks___">
+                <h2>Read Books</h2>
+                <div class="container_box" id="readBooks">
                 </div>
-                <div class="unread_book">
-                    <h2>Books that have not been read:</h2>
-                    <div id="unread_books_">
-
-                    </div>
-                </div>
+            </div>
+            <div class="unReadBooks_____">
+                <h2>Unread Books</h2>
+                <div class="container_box" id="unReadBooks">
             </div>
         </div>
     </main>
     <footer>
-        <!-- <p>A simple web application for storing books</p> -->
+        <div class="Footer_text">
+            <p><strong>Adi Pratama jaya</strong></p>
+            <p>Websites are created with HTML, CSS, JavaScript, <br>and can store data in local storage</p>
+        </div>
+        <div class="media_social_text">
+            <p>Social media contacts : </p>
+            <div class="social_media">
+                <a href="#">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a href="#">         
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+        </div>
     </footer>
 </body>
+<script src="apps/js/script.js"></script>
 </html>
