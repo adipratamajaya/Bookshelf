@@ -237,16 +237,28 @@ function removeBooksShelft(array) {
 // data found
 function actionFound(_data){
   const container_books_ = document.querySelector(".container_books_");
-  const noFoundDataBooks_ = document.createElement("h2");
-  noFoundDataBooks_.innerText = "Books data not ready :(";
-  noFoundDataBooks_.classList.add("notFoundBooks");
-  container_books_.prepend(noFoundDataBooks_);
 
     if (_data.length > 0  ){
-        noFoundDataBooks_.remove()
-        const newDataBooksFound = document.createElement("h2");
-        newDataBooksFound.innerText = "Books Data Is Ready!";
-        newDataBooksFound.classList.add("notFoundBooks");
-        container_books_.prepend(newDataBooksFound);
+      const newDataBooksFound = document.createElement("h2");
+      newDataBooksFound.innerText = "Books Data Is Ready!";
+      newDataBooksFound.classList.add("notFoundBooks");
+      container_books_.prepend(newDataBooksFound);
+    } else {
+      const noFoundDataBooks_ = document.createElement("h2");
+      noFoundDataBooks_.innerText = "Books data not ready :(";
+      noFoundDataBooks_.classList.add("notFoundBooks");
+      container_books_.prepend(noFoundDataBooks_);
     }
+  }
+  // sumit Ready 
+  function submitReadyBooks (){
+    const container_books_ = document.querySelector(".container_books_");
+    const notFoundBooks = document.querySelector(".notFoundBooks");
+
+    notFoundBooks.remove();
+    const newDataBooksFound = document.createElement("h2");
+    newDataBooksFound.innerText = "Books Data Is Ready!";
+    newDataBooksFound.classList.add("notFoundBooks");
+    container_books_.prepend(newDataBooksFound);
+
   }
