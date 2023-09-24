@@ -5,6 +5,11 @@ const books_RENDER = 'render-books';
 const SAVED_EVENT = 'saved-array';
 const STORAGE_KEY = 'BOOKS_WEB';
 
+// notFoundAction
+const foundData = [];
+const checkFound = "Save-Found";
+const notFoundActn = 'notfound';
+
 document.addEventListener('DOMContentLoaded', function () {
 
    if (isStorageExist()) {
@@ -17,11 +22,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
      event.preventDefault();
      addBooks();
+     actionFound();
 
    });
  });
  document.addEventListener(SAVED_EVENT, function () {
-  console.log(localStorage.getItem(STORAGE_KEY));
   
 });
 
@@ -89,7 +94,7 @@ function makeBooks(booksData) {
 
 
       const rightBtn = document.createElement("button");
-      rightBtn.classList.add("fa-solid", "fa-arrow-right", "fa-lg","right_ctn");
+      rightBtn.classList.add("fa-solid","fa-arrow-down");
       // action
       rightBtn.addEventListener("click", function() {
          readBookShelf(booksData);
@@ -109,7 +114,7 @@ function makeBooks(booksData) {
          })
 
       const leftBtn = document.createElement("button");
-      leftBtn.classList.add("fa-solid", "fa-arrow-left", "fa-lg","left_actn");
+      leftBtn.classList.add("fa-solid","fa-arrow-up");
       // action {
          leftBtn.addEventListener("click", function () {
             unReadBookShelf(booksData);
@@ -120,7 +125,7 @@ function makeBooks(booksData) {
       divBtn.append(btnTrash, leftBtn);
       container.append(divBtn);
    }
-   
+
   return container;
 
 }
@@ -143,7 +148,6 @@ document.addEventListener(books_RENDER, function () {
  });
 
 //  action buttton 
-
 function readBookShelf (makeBooks) {
    const booksItems = findeBooks(makeBooks);
  
@@ -226,6 +230,26 @@ function removeBooksShelft(array) {
        arrayBooks.push(books);
      }
    }
-  
+
    document.dispatchEvent(new Event(books_RENDER));
  }
+
+// data found
+const container_books_ = document.querySelector(".container_books_");
+const noFoundDataBooks_ = document.createElement("h2");
+noFoundDataBooks_.innerText = "Books data not ready :(";
+noFoundDataBooks_.classList.add("notFoundBooks");
+container_books_.prepend(noFoundDataBooks_);
+
+function actionFound(){
+  noFoundDataBooks_.remove()
+  const newDataBooksFound = document.createElement("h2");
+  newDataBooksFound.innerText = "Books data is ready !";
+  newDataBooksFound.classList.add("notFoundBooks");
+  container_books_.prepend(newDataBooksFound);
+
+  const dataNotFound = (newDataBooksFound);
+  foundData.push(dataNotFound);
+  console.log(dataNotFound);
+
+}
