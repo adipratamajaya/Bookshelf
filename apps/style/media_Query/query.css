@@ -49,3 +49,33 @@
     }
    
 }
+@media (max-width:349px) {
+    main .container #input_books {
+        width: 300px;
+    }
+    main .container {
+        top: 0;
+        right: 0;
+        padding-bottom: 30px;
+    }
+    main .container_books_ {
+        width: 100%;
+        padding: 20px;
+    }
+    main .container_books_ .readBooks___{
+        width: 100%;
+    }
+    main .container_books_ .unReadBooks_____{
+        width: 100%;
+    }
+    main .container_books_ h2 {
+        font-size: 1rem;
+    }
+
+    footer {
+        gap: 10px;
+        flex-direction: column;
+        text-align: center;
+    }
+   
+}
