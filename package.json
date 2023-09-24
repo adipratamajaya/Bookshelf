@@ -2,9 +2,9 @@
   "name": "bookshelf",
   "version": "2.0.0",
   "description": "Bookshelf Web Apps An application for adding books to the bookshelf that have been read and unread",
-  "main": "index.js",
+  "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node script.js"
   },
   "repository": {
     "type": "git",
