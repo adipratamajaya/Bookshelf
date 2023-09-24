@@ -1,20 +1,24 @@
 {
   "name": "bookshelf",
   "version": "2.0.0",
-  "description": "A simple web to organize books into bookshelves, there are 2 bookshelves: the first is for books that have been read and the second is for books that have not been read.",
+  "description": "Bookshelf Web Apps An application for adding books to the bookshelf that have been read and unread",
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "test": "erorr"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "Adi pratama jaya",
-  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/adipratamajaya/Bookshelf.git"
   },
+  "keywords": [
+    "javascript",
+    "html",
+    "css"
+  ],
+  "author": "adi pratama jaya",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/adipratamajaya/Bookshelf/issues"
-  }
+  },
+  "homepage": "https://github.com/adipratamajaya/Bookshelf#readme"
 }
