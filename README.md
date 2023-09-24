@@ -4,11 +4,11 @@ A simple web to organize books into bookshelves, there are 2 bookshelves: the fi
 
 ![Alt text](apps/images/Web/web_apps.png)
 
-## Teknologi
+## Technology
 
 This web is created using HTML, CSS, and Javascript. It can store data in local storage so that when the page is refreshed, the stored data will still be available. Any inputted data will be saved and appear again.
 
-## Latar Belakang
+## Background
 
 This is a summary assignment from the Dicoding class (Learning to Create a Front-End Web for Beginners)
 
@@ -38,7 +38,13 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
+#
+
+Thank you for visiting my github. 🤓\
+by Adi Pratama jaya
+
 ## 🔗 Contact
 
-[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://adipratamajaya.github.io/)
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/adipratamajaya/)
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](<[https://www.linkedin.com/in/adipratamajaya/](https://www.instagram.com/apratama_x_x/)>)
+[![youtube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](<[https://www.linkedin.com/in/adipratamajaya/](https://www.youtube.com/c/Adipratamajaya)>)
