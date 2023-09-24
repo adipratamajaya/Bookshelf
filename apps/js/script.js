@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
      event.preventDefault();
      addBooks();
+     clearInput();
 
    });
  });
@@ -260,5 +261,11 @@ function actionFound(_data){
     newDataBooksFound.innerText = "Books Data Is Ready!";
     newDataBooksFound.classList.add("notFoundBooks");
     container_books_.prepend(newDataBooksFound);
+  }
 
+  // input clear 
+  function clearInput () {
+    const nameBooks = document.getElementById("nameBooks").value = "";
+    const authorBooks = document.getElementById("authorBooks").value = ""; 
+    const dateBooks = document.getElementById("dateBooks").value = "";
   }
