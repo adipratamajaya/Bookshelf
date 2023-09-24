@@ -1,3 +1,4 @@
+// books data
 const arrayBooks = [];
 const books_RENDER = 'render-books';
 
@@ -38,8 +39,6 @@ function addBooks () {
    const booksdata = buildData(nameBooks, authorBooks, dateBooks, unOrRead, batchBooksSerial);
    arrayBooks.push(booksdata);
 
-   console.log(booksdata);
-
    
   document.dispatchEvent(new Event(books_RENDER));
   saveData();
@@ -64,20 +63,20 @@ function buildData(name, author, date, readBooks, batchBooks){
 function makeBooks(booksData) {
 
   const namaBooks = document.createElement('h2');
-  namaBooks.innerText = booksData.name;
+  namaBooks.innerText = `Name books : ${booksData.name}`;
  
   const nameAuthor = document.createElement('p');
-  nameAuthor.innerText = booksData.author;
+  nameAuthor.innerText = `Author : ${booksData.author}`;
 
   const dateBooks = document.createElement('p');
-  dateBooks.innerText = booksData.date;
+  dateBooks.innerText = `Date input : ${booksData.date}`;
  
   const booksContainer = document.createElement('div');
   booksContainer.classList.add('booksItem');
   booksContainer.append(namaBooks, nameAuthor, dateBooks);
 
   const container = document.createElement('div');
-  container.classList.add('container_box_');
+  container.classList.add('container_box_','animate__animated', 'animate__fadeIn');
   container.append(booksContainer);
 
    if( booksData.readBooks == true){
@@ -229,7 +228,6 @@ function removeBooksShelft(array) {
    }
 
    actionFound(data)
-   console.log(data)
 
   //  actionFound(localStorage);
    document.dispatchEvent(new Event(books_RENDER));
@@ -259,13 +257,19 @@ function actionFound(_data){
     notFoundBooks.remove();
     const newDataBooksFound = document.createElement("h2");
     newDataBooksFound.innerText = "Books Data Is Ready!";
-    newDataBooksFound.classList.add("notFoundBooks");
+    newDataBooksFound.classList.add("readyFoundBooks");
     container_books_.prepend(newDataBooksFound);
   }
+    // input clear 
+    function clearInput () {
+      const nameBooks = document.getElementById("nameBooks").value = "";
+      const authorBooks = document.getElementById("authorBooks").value = ""; 
+      const dateBooks = document.getElementById("dateBooks").value = "";
+  
+  
+      return nameBooks,authorBooks,dateBooks;
+    }
 
-  // input clear 
-  function clearInput () {
-    const nameBooks = document.getElementById("nameBooks").value = "";
-    const authorBooks = document.getElementById("authorBooks").value = ""; 
-    const dateBooks = document.getElementById("dateBooks").value = "";
-  }
+
+
+    console.log(" Cerita di paksa cewe :( ");

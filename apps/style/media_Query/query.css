@@ -10,7 +10,6 @@
 
 /* mobile */ 
 @media (max-width:480px) {
-
     /* header */
     header {
         flex-direction: column;
@@ -19,16 +18,19 @@
     body main {
         flex-direction: column;
         justify-content: flex-start;
-        padding: 20px;
+        padding: 60px 0px;
         height: fit-content;
         padding-bottom: 129px;
     }
     main .container {
         width: 100%;
+        top: 0;
+        right: 0;
+        padding-bottom: 30px;
     }
     main .container_books_ {
         width: 100%;
-        padding: 15px 0px;
+        padding: 20px;
     }
     main .container_books_ .readBooks___{
         width: 100%;
