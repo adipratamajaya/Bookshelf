@@ -5,10 +5,6 @@ const books_RENDER = 'render-books';
 const SAVED_EVENT = 'saved-array';
 const STORAGE_KEY = 'BOOKS_WEB';
 
-// notFoundAction
-const foundData = [];
-const checkFound = "Save-Found";
-const notFoundActn = 'notfound';
 
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -22,10 +18,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
      event.preventDefault();
      addBooks();
-     actionFound();
 
    });
  });
+
  document.addEventListener(SAVED_EVENT, function () {
   
 });
@@ -231,25 +227,26 @@ function removeBooksShelft(array) {
      }
    }
 
+   actionFound(data)
+   console.log(data)
+
+  //  actionFound(localStorage);
    document.dispatchEvent(new Event(books_RENDER));
  }
 
 // data found
-const container_books_ = document.querySelector(".container_books_");
-const noFoundDataBooks_ = document.createElement("h2");
-noFoundDataBooks_.innerText = "Books data not ready :(";
-noFoundDataBooks_.classList.add("notFoundBooks");
-container_books_.prepend(noFoundDataBooks_);
+function actionFound(_data){
+  const container_books_ = document.querySelector(".container_books_");
+  const noFoundDataBooks_ = document.createElement("h2");
+  noFoundDataBooks_.innerText = "Books data not ready :(";
+  noFoundDataBooks_.classList.add("notFoundBooks");
+  container_books_.prepend(noFoundDataBooks_);
 
-function actionFound(){
-  noFoundDataBooks_.remove()
-  const newDataBooksFound = document.createElement("h2");
-  newDataBooksFound.innerText = "Books data is ready !";
-  newDataBooksFound.classList.add("notFoundBooks");
-  container_books_.prepend(newDataBooksFound);
-
-  const dataNotFound = (newDataBooksFound);
-  foundData.push(dataNotFound);
-  console.log(dataNotFound);
-
-}
+    if (_data.length > 0  ){
+        noFoundDataBooks_.remove()
+        const newDataBooksFound = document.createElement("h2");
+        newDataBooksFound.innerText = "Books Data Is Ready!";
+        newDataBooksFound.classList.add("notFoundBooks");
+        container_books_.prepend(newDataBooksFound);
+    }
+  }
