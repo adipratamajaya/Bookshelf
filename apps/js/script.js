@@ -234,10 +234,10 @@ function removeBooksShelft(array) {
  }
 
 // data found
-function actionFound(dataCondisi){
+function actionFound(_data){
   const container_books_ = document.querySelector(".container_books_");
 
-    if (dataCondisi > 0  ){
+    if (_data.length > 0  ){
       const newDataBooksFound = document.createElement("h2");
       newDataBooksFound.innerText = "Books Data Is Ready!";
       newDataBooksFound.classList.add("notFoundBooks");
