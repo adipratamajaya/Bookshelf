@@ -272,4 +272,4 @@ function actionFound(_data){
 
 
 
-    console.log(" Cerita di paksa cewe :( ");
+    console.log(" Cerita di paksa cewe ya gitu lah :( ");
