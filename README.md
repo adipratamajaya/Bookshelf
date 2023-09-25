@@ -4,6 +4,8 @@
 
 ![Alt text](apps/images/Web/web_apps%20v%202.0.0.jpg)
 
+- Update UI/UX
+
 ## New features V 2.0
 
 - Responsive web for mobile. <br><br>
