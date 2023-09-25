@@ -128,14 +128,17 @@ main {
     padding: 10px;
 }
 .booksItem h2 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
+    padding-bottom: 5px;
 }
 .booksItem p:nth-child(2){
-font-size: 0.9rem;
+    font-size: 0.9rem;
+    font-weight: 100;
 }
 .booksItem p:nth-last-child(1){
     font-size: 0.9rem;
+    font-weight: 100;
 }
 
 .btn_books {
