@@ -63,7 +63,7 @@ function buildData(name, author, date, readBooks, batchBooks){
 function makeBooks(booksData) {
 
   const namaBooks = document.createElement('h2');
-  namaBooks.innerText = `Name books : ${booksData.name}`;
+  namaBooks.innerText = `${booksData.name}`;
  
   const nameAuthor = document.createElement('p');
   nameAuthor.innerText = `Author : ${booksData.author}`;
