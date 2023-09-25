@@ -13,7 +13,6 @@
     /* header */
     body header {
         flex-direction: column;
-        padding: 60px 0;
     }
     /* main */ 
     body main {
