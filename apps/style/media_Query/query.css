@@ -11,8 +11,9 @@
 /* mobile */ 
 @media (max-width:480px) {
     /* header */
-    header {
+    body header {
         flex-direction: column;
+        padding: 60px 0;
     }
     /* main */ 
     body main {
