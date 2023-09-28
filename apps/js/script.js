@@ -227,17 +227,17 @@ function removeBooksShelft(array) {
      }
    }
 
-   actionFound(data)
+   actionFound(localStorage)
 
   //  actionFound(localStorage);
    document.dispatchEvent(new Event(books_RENDER));
  }
 
 // data found
-function actionFound(data_){
+function actionFound(data){
   const container_books_ = document.querySelector(".container_books_");
 
-    if (data_.length > 0  ){
+    if (data.length > 0  ){
       const newDataBooksFound = document.createElement("h2");
       newDataBooksFound.innerText = "Books Data Is Ready!";
       newDataBooksFound.classList.add("notFoundBooks");
