@@ -180,9 +180,13 @@ function findeBooks(readBooks){
 
 function removeBooksShelft(array) {
    const todoTarget = findTodoIndex(array);
+
+   window.onclick = function() {
+    localStorage.removeItem("BOOKS_WEB");
+    return '';
+  };
   
    if (todoTarget === -1) return;
-  
    arrayBooks.splice(todoTarget, 1);
    document.dispatchEvent(new Event(books_RENDER));
    saveData();
@@ -220,6 +224,7 @@ function removeBooksShelft(array) {
  function loadDataFromStorage() {
    const serializedData = localStorage.getItem(STORAGE_KEY);
    let data = JSON.parse(serializedData);
+   actionFound(data);
   
    if (data !== null) {
      for (const books of data) {
@@ -227,7 +232,7 @@ function removeBooksShelft(array) {
      }
    }
 
-   actionFound(localStorage)
+
 
   //  actionFound(localStorage);
    document.dispatchEvent(new Event(books_RENDER));
@@ -237,7 +242,7 @@ function removeBooksShelft(array) {
 function actionFound(data){
   const container_books_ = document.querySelector(".container_books_");
 
-    if (data.length > 0  ){
+    if (data !== null){
       const newDataBooksFound = document.createElement("h2");
       newDataBooksFound.innerText = "Books Data Is Ready!";
       newDataBooksFound.classList.add("notFoundBooks");
@@ -248,6 +253,7 @@ function actionFound(data){
       noFoundDataBooks_.classList.add("notFoundBooks");
       container_books_.prepend(noFoundDataBooks_);
     }
+    console.log(data)
   }
   // sumit Ready 
   function submitReadyBooks (){
