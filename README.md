@@ -1,8 +1,18 @@
-# Bookshelft Web Apps
+# Bookshelft Web Apps v 2.0.1
 
-A simple web to organize books into bookshelves, there are 2 bookshelves: the first is for books that have been read and the second is for books that have not been read.
+**Update V 2.0.1** A simple web to organize books into bookshelves, there are 2 bookshelves: the first is for books that have been read and the second is for books that have not been read.
 
-![Alt text](apps/images/Web/web_apps.png)
+![Alt text](apps/images/Web/web_apps%20v%202.0.0.jpg)
+
+- Update UI/UX
+
+## New features V 2.0.1
+
+- Responsive web for mobile. <br><br>
+  ![mobile web](apps/images/Web/Mobile.jpg)
+- New up and down buttons for read and unread books.
+- If new data is added the text will change **"BOOKS DATA IS READY"**.
+- If the browser is refreshed, if there is data in local storage, the text will change to **BOOKS DATA IS READY**
 
 ## Technology
 
