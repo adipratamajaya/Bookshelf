@@ -20,7 +20,7 @@
             <h1>bookshelf</h1>
             <p>Simple bookshelf using HTML, CSS, and Javascript</p>
     </header>
-    <main>
+    <main class="css-selector">
         <div class="container">
             <h2>A simple web application for storing books</h2>
             <div id="input_books">
@@ -43,12 +43,13 @@
                         <label for="readvcek_">Read?</label>
                         <input type="checkbox" id="readvcek_" name="readvcek_">
                     </div>
-                    <input type="submit" name="submit" id="submit" onclick="submitReadyBooks()">
+                    <input type="submit" name="submit" id="submit">
                 </form>
             </div>
         </div>
         <!-- books read an unread -->
         <div class="container_books_">
+            <h2 class="readyFoundBooks">Books Data Liblary </h2>
             <div class="readBooks___" >
                 <h2>Read Books</h2>
                 <i class="fa-solid fa-arrow-down fa-2xs"></i>
@@ -85,6 +86,6 @@
             </div>
         </div>
     </footer>
+    <script src="apps/js/script.js"></script>
 </body>
-<script src="apps/js/script.js"></script>
 </html>
