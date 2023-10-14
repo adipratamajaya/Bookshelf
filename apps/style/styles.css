@@ -121,10 +121,13 @@ main {
 }
 /* read books  */
 .readBooks___ {
+    padding: 15px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
     background-color: var(--color-bg);
     color: #F7EEBB;
     border-radius: 10px;
-    padding: 15px;
     font-family: Roboto;
 }
 #readBooks{
@@ -132,18 +135,30 @@ main {
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
 }
+.readBooks___ h2 {
+    padding-bottom: 5px;
+}
 /* un readbooks */
 .unReadBooks_____ {
+    justify-content: center;
+    display: flex;
+    align-items: center;
     background-color: var(--color-bg);
     color: #F7EEBB;
     border-radius: 10px;
-    padding: 15px;
+    padding: 10px;
+    font-family: Roboto;
+    flex-direction: column;
 }
 #unReadBooks {
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
 }
+.unReadBooks_____ h2 {
+    padding-bottom: 5px;
+}
+/* ======== */
 .container_box_ {
     display: flex;
     align-items: center;
