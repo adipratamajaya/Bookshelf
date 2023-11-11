@@ -1,91 +1,61 @@
 /* Tablet */
 @media (max-width:768px) {
-
-    /* main */
-    main {
-        padding: 0;
-    }
     
 }
 
 /* mobile */ 
 @media (max-width:480px) {
-    /* header */
-    body header {
+    /* Header */
+    header {
+        display: flex;
         flex-direction: column;
-    }
-    main .container_books_ .booksItem h2 {
-        font-size: 1rem;
-        text-transform: uppercase;
-    }
-    main .container_books_ .booksItem p:nth-child(2){
-    font-size: 0.8rem;
-    }
-    main .container_books_ .booksItem p:nth-last-child(1){
-        font-size: 0.8rem;
-    }
-    /* main */ 
-    body main {
-        flex-direction: column;
-        justify-content: flex-start;
-        padding: 60px 0px;
-        height: fit-content;
-        padding-bottom: 129px;
-    }
-    main .container {
-        width: 100%;
-        top: 0;
-        right: 0;
-        padding-bottom: 30px;
-    }
-    main .container_books_ {
-        width: 100%;
-        padding: 20px;
-    }
-    main .container_books_ .readBooks___{
-        width: 100%;
-    }
-    main .container_books_ .unReadBooks_____{
-        width: 100%;
-    }
-    main .container_books_ h2 {
-        font-size: 1rem;
     }
 
+    /* main */
+    main {
+        padding: 1px;
+    }
+    main {
+        align-self: center;
+
+    }
+    body .container_main_page {
+        height: 0%;
+        display: flex;
+        flex-direction: column;
+    }
+    .container_main_page  main {
+    display: flex;
+    flex-direction: column;
+    }
+    /* main books container */
+    main .readBooks___ {
+        width: 100%;
+    }
+    main #readBooks {
+        grid-template-columns: auto;
+    }
+    main #unReadBooks {
+        grid-template-columns: auto;
+    }
+    main .container {
+        align-self: center;
+    }
+    main .container_books_ {
+        align-self: center;
+    }
+    /* btn books */
+
+
+    /* footer */
     footer {
-        gap: 10px;
+        display: flex;
         flex-direction: column;
         text-align: center;
     }
+
    
 }
 @media (max-width:349px) {
-    main .container #input_books {
-        width: 300px;
-    }
-    main .container {
-        top: 0;
-        right: 0;
-        padding-bottom: 30px;
-    }
-    main .container_books_ {
-        width: 100%;
-        padding: 20px;
-    }
-    main .container_books_ .readBooks___{
-        width: 100%;
-    }
-    main .container_books_ .unReadBooks_____{
-        width: 100%;
-    }
-    main .container_books_ h2 {
-        font-size: 1rem;
-    }
-
-    footer {
-        gap: 10px;
-        flex-direction: column;
-        text-align: center;
-    }
    
 }
