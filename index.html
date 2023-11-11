@@ -20,49 +20,49 @@
             <h1>bookshelf</h1>
             <p>Simple bookshelf using HTML, CSS, and Javascript</p>
     </header>
-    <main class="css-selector">
-        <div class="container">
-            <h2>A simple web application for storing books</h2>
-            <div id="input_books">
-                <form id="input_data_books">
-                    <p>Input your book in web apps</p>
-                    <div class="data_books">
-                        <!-- nama -->
-                        <label for="nama">Name books :</label>
-                        <input type="text" placeholder="Name Books" id="nameBooks" name="nameBooks" required autofocus minlength="1" autocomplete="off">
-                        <!-- author -->
-                        <label for="author">Author :</label>
-                        <input type="text" placeholder="Author" id="authorBooks" name="authorBooks" required minlength="1" autocomplete="off">
+        <div class="container_main_page css-selector">
+            <main>
+                <div class="container">
+                    <h2>A simple web application for storing books</h2>
+                    <div id="input_books">
+                        <form id="input_data_books">
+                            <p>Input your book in web apps</p>
+                            <div class="data_books">
+                                <!-- nama -->
+                                <label for="nama">Name books :</label>
+                                <input type="text" placeholder="Name Books" id="nameBooks" name="nameBooks" required autofocus minlength="1" autocomplete="off">
+                                <!-- author -->
+                                <label for="author">Author :</label>
+                                <input type="text" placeholder="Author" id="authorBooks" name="authorBooks" required minlength="1" autocomplete="off">
+                            </div>
+                            <div class="date_input">
+                                <label for="date">Date input books :</label>
+                                <input type="date" id="dateBooks" name="dateBooks" required>
+                            </div>
+                            <div class="readBooksCek">
+                                <!-- read or unread -->
+                                <label for="readvcek_">Read?</label>
+                                <input type="checkbox" id="readvcek_" name="readvcek_">
+                            </div>
+                            <input type="submit" name="submit" id="submit">
+                        </form>
                     </div>
-                    <div class="date_input">
-                        <label for="date">Date input books :</label>
-                        <input type="date" id="dateBooks" name="dateBooks" required>
-                    </div>
-                    <div class="readBooksCek">
-                        <!-- read or unread -->
-                        <label for="readvcek_">Read?</label>
-                        <input type="checkbox" id="readvcek_" name="readvcek_">
-                    </div>
-                    <input type="submit" name="submit" id="submit">
-                </form>
-            </div>
-        </div>
-        <!-- books read an unread -->
-        <div class="container_books_">
-            <h2 class="readyFoundBooks">Books Data Liblary </h2>
-            <div class="readBooks___" >
-                <h2>Read Books</h2>
-                <i class="fa-solid fa-arrow-down fa-2xs"></i>
-                <div class="container_box" id="readBooks">
                 </div>
-            </div>
-            <div class="unReadBooks_____">
-                <h2>Unread Books</h2>
-                <i class="fa-solid fa-arrow-down fa-2xs"></i>
-                <div class="container_box" id="unReadBooks">
-            </div>
+                <!-- books read an unread -->
+                <div class="container_books_">
+                    <h2 class="readyFoundBooks">Books Data Liblary </h2>
+                    <div class="readBooks___" >
+                        <h2 class="title_">Read Books :</h2>
+                        <div class="container_box" id="readBooks">
+                        </div>
+                    </div>
+                    <div class="unReadBooks_____">
+                        <h2 class="title_">Unread Books :</h2>
+                        <div class="container_box" id="unReadBooks">
+                    </div>
+                </div>
+            </main>
         </div>
-    </main>
     <footer>
         <div class="Footer_text">
             <p><strong>Adi Pratama jaya</strong></p>
