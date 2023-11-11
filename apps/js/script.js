@@ -42,6 +42,7 @@ function addBooks () {
    
   document.dispatchEvent(new Event(books_RENDER));
   saveData();
+  
 
 }
 
@@ -81,23 +82,23 @@ function makeBooks(booksData) {
 
    if( booksData.readBooks == true){
 
-      const btnTrash = document.createElement("button");
-      btnTrash.classList.add('fa-solid', 'fa-trash', 'fa-lg', 'trash_actn');
+      const btnTrash = document.createElement("i");
+      btnTrash.classList.add('fa-solid', 'fa-trash', 'fa-xl', 'trash_actn');
       // action
       btnTrash.addEventListener("click", function(){
          removeBooksShelft(booksData);
       })
 
 
-      const rightBtn = document.createElement("button");
-      rightBtn.classList.add("fa-solid","fa-arrow-down");
+      const rightBtn = document.createElement("i");
+      rightBtn.classList.add("fa-solid","fa-arrow-down","fa-xl");
       // action
       rightBtn.addEventListener("click", function() {
          readBookShelf(booksData);
       })
 
       const editValue = document.createElement("button");
-      editValue.classList.add("fa-solid","fa-code");
+      editValue.classList.add("fa-solid", "fa-camera");
 
       const divBtn = document.createElement('div');
       divBtn.classList.add('btn_books');
@@ -105,18 +106,24 @@ function makeBooks(booksData) {
       container.append(divBtn);
 
    } else {
-      const btnTrash = document.createElement("button");
-      btnTrash.classList.add('fa-solid', 'fa-trash', 'fa-lg','trash_actn');
+      const btnTrash = document.createElement("i");
+      btnTrash.classList.add('fa-solid', 'fa-trash', 'fa-lg','trash_actn',"fa-xl");
       // action {
          btnTrash.addEventListener("click", function () {
             removeBooksShelft(booksData);
          })
 
-      const leftBtn = document.createElement("button");
-      leftBtn.classList.add("fa-solid","fa-arrow-up");
+      const leftBtn = document.createElement("i");
+      leftBtn.classList.add("fa-solid","fa-arrow-up","fa-xl");
       // action {
          leftBtn.addEventListener("click", function () {
             unReadBookShelf(booksData);
+         })
+         const editValue = document.createElement("i");
+         editValue.classList.add("fa-solid", "fa-gear", "fa-xl");
+
+         editValue.addEventListener('click', function(){
+          editValueBooks(booksData);
          })
 
       const editValue = document.createElement("button");
@@ -182,6 +189,53 @@ function findeBooks(readBooks){
       }
     }
     return null;
+}
+
+// edit value books
+function editValueBooks(booksData) {
+
+  const arrayBooks = findTodoIndex(booksData)
+
+  // value edit
+  const nameBooksEdit = document.createElement('input')
+  nameBooksEdit.setAttribute('placeholder', `${booksData.name}`)
+
+  const authorBooksedit = document.createElement('input')
+  authorBooksedit.setAttribute('placeholder', `${booksData.author}`)
+
+  const dateBooksEdit = document.createElement('input')
+  dateBooksEdit.setAttribute('placeholder', `${booksData.date}`)
+
+  const submitNewData = document.createElement('input');
+  submitNewData.setAttribute('type', 'submit')
+  // =========
+
+
+  if ( arrayBooks == true) {
+
+    const editMenu = document.createElement('div');
+    editMenu.append(nameBooksEdit, authorBooksedit, dateBooksEdit, submitNewData);
+    editMenu.classList.add('edit_menu');
+
+    // read
+    const read_____ = document.querySelector('#readBooks')
+    read_____.append(editMenu)
+
+    console.log("true")
+
+  } else {
+
+    const editMenu = document.createElement('div');
+    editMenu.append(nameBooksEdit, authorBooksedit, dateBooksEdit, submitNewData);
+    editMenu.classList.add('edit_menu');
+
+    // unread
+    const unRead____ = document.querySelector("#unReadBooks");
+    unRead____.append(editMenu)
+
+    console.log("false")
+  }
+  return;
 }
 
 function removeBooksShelft(array) {

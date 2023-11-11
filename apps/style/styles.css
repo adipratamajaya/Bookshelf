@@ -19,6 +19,23 @@ html {
     --color-text: #F7EEBB;
     --font-web : Roboto;
 }
+/* edit menu */
+.edit_menu {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background-color: var(--color-scond);
+    margin-left: 10px;
+}
+.edit_menu input {
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    height: 35px;
+}
 /* not found books */
 .notFoundBooks {
     font-family: var(--font-web);
@@ -121,16 +138,7 @@ main {
     flex-direction: column;
     gap: 10px;
     font-family: Roboto;
-    border: var(--color-text) solid 2px ;
-    padding: 15px;
-    border-style: dashed;
-    border-radius: 5px;
-    height: fit-content;
-}
-.container_main_page {
-    position: relative;
-    height: 100vh;
-    width: 100%;
+    overflow: auto;
 }
 /* read books  */
 .readBooks___ {
@@ -155,6 +163,8 @@ main {
 .unReadBooks_____ {
     justify-content: center;
     display: flex;
+    align-items: center;
+    background-color: var(--color-bg);
     color: #F7EEBB;
     border-radius: 10px;
     padding: 10px;
@@ -203,6 +213,8 @@ main {
 .btn_books {
     display: flex;
     gap: 10px;
+    height: 43px;
+    margin-left: 30px;
     border-left: var(--color-scond) 5px solid;
     padding-left: 10px;
     border-left-style: dotted;
@@ -214,7 +226,7 @@ main {
     background-color: rgba(240, 248, 255, 0);
     cursor: pointer;
 }
-.btn_books button:hover {
+.btn_books i:hover {
     color: var(--color-scond);
     cursor: pointer;
 }
