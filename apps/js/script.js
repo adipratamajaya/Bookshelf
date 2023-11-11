@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
    if (isStorageExist()) {
       loadDataFromStorage();
-    }
+    } 
 
    const submitBooks = document.getElementById('input_data_books');
 
@@ -97,7 +97,7 @@ function makeBooks(booksData) {
       })
 
       const editValue = document.createElement("button");
-      editValue.classList.add("fa-solid", "fa-camera");
+      editValue.classList.add("fa-solid","fa-code");
 
       const divBtn = document.createElement('div');
       divBtn.classList.add('btn_books');
@@ -119,9 +119,12 @@ function makeBooks(booksData) {
             unReadBookShelf(booksData);
          })
 
+      const editValue = document.createElement("button");
+      editValue.classList.add("fa-solid","fa-code");
+
       const divBtn = document.createElement('div');
       divBtn.classList.add('btn_books');
-      divBtn.append(btnTrash, leftBtn);
+      divBtn.append(btnTrash, leftBtn, editValue);
       container.append(divBtn);
    }
 
@@ -240,35 +243,6 @@ function removeBooksShelft(array) {
   //  actionFound(localStorage);
    document.dispatchEvent(new Event(books_RENDER));
  }
-
-// data found
-// function actionFound(data){
-//   const container_books_ = document.querySelector(".container_books_");
-
-//     if (data < localStorage.length){
-//       const newDataBooksFound = document.createElement("h2");
-//       newDataBooksFound.innerText = "Books Data Is Ready!";
-//       newDataBooksFound.classList.add("notFoundBooks");
-//       container_books_.prepend(newDataBooksFound);
-//     } else {
-//       const noFoundDataBooks_ = document.createElement("h2");
-//       noFoundDataBooks_.innerText = "Books data not ready :(";
-//       noFoundDataBooks_.classList.add("notFoundBooks");
-//       container_books_.prepend(noFoundDataBooks_);
-//     }
-//     console.log(data)
-//   }
-  // sumit Ready 
-  // function submitReadyBooks (){
-  //   const container_books_ = document.querySelector(".container_books_");
-  //   const notFoundBooks = document.querySelector(".notFoundBooks");
-
-  //   notFoundBooks.remove();
-  //   const newDataBooksFound = document.createElement("h2");
-  //   newDataBooksFound.innerText = "Books Data Is Ready!";
-  //   newDataBooksFound.classList.add("readyFoundBooks");
-  //   container_books_.prepend(newDataBooksFound);
-  // }
     // input clear 
     function clearInput () {
       const nameBooks = document.getElementById("nameBooks").value = "";
@@ -279,4 +253,4 @@ function removeBooksShelft(array) {
       return nameBooks,authorBooks,dateBooks;
     }
 
-    console.log(" Cerita di paksa cewe ya gitu lah :( ");
+    console.log( " Ya begitu lah :D ");
