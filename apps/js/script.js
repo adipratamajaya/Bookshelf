@@ -119,12 +119,6 @@ function makeBooks(booksData) {
          leftBtn.addEventListener("click", function () {
             unReadBookShelf(booksData);
          })
-         const editValue = document.createElement("i");
-         editValue.classList.add("fa-solid", "fa-gear", "fa-xl");
-
-         editValue.addEventListener('click', function(){
-          editValueBooks(booksData);
-         })
 
       const editValue = document.createElement("button");
       editValue.classList.add("fa-solid","fa-code");
