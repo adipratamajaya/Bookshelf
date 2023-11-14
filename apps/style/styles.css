@@ -134,8 +134,12 @@ main {
 
 /*  container read or Unread */
 .container_books_ {
+    border: var(--color-scond) solid 3px;
+    padding: 10px;
+    border-style: dotted;
     display: flex;
     flex-direction: column;
+    border-radius: 10px;
     gap: 10px;
     font-family: Roboto;
     overflow: auto;
@@ -163,7 +167,6 @@ main {
 .unReadBooks_____ {
     justify-content: center;
     display: flex;
-    align-items: center;
     background-color: var(--color-bg);
     color: #F7EEBB;
     border-radius: 10px;
@@ -211,6 +214,7 @@ main {
 }
 
 .btn_books {
+    align-items: center;
     display: flex;
     gap: 10px;
     height: 43px;
