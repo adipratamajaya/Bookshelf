@@ -97,8 +97,8 @@ function makeBooks(booksData) {
          readBookShelf(booksData);
       })
 
-      const editValue = document.createElement("button");
-      editValue.classList.add("fa-solid", "fa-camera");
+      const editValue = document.createElement("i");
+      editValue.classList.add("fa-solid","fa-code", 'fa-xl');
 
       const divBtn = document.createElement('div');
       divBtn.classList.add('btn_books');
@@ -120,8 +120,11 @@ function makeBooks(booksData) {
             unReadBookShelf(booksData);
          })
 
-      const editValue = document.createElement("button");
-      editValue.classList.add("fa-solid","fa-code");
+      const editValue = document.createElement("i");
+      editValue.classList.add("fa-solid","fa-code", 'fa-xl');
+      editValue.addEventListener('click', function(){
+        editValueAction(booksData);
+      })
 
       const divBtn = document.createElement('div');
       divBtn.classList.add('btn_books');
@@ -243,6 +246,7 @@ function removeBooksShelft(array) {
    if (todoTarget === -1) return;
    arrayBooks.splice(todoTarget, 1);
    document.dispatchEvent(new Event(books_RENDER));
+   console.log(todoTarget)
    saveData();
  }
 
@@ -302,3 +306,9 @@ function removeBooksShelft(array) {
     }
 
     console.log( " Ya begitu lah :D ");
+
+    // action editvalue 
+    function editValueAction (booksDataArayy){
+      const tergetEdit = findTodoIndex(booksDataArayy)
+      console.log(booksDataArayy);
+    }
