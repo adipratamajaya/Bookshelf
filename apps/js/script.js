@@ -99,6 +99,9 @@ function makeBooks(booksData) {
 
       const editValue = document.createElement("i");
       editValue.classList.add("fa-solid","fa-code", 'fa-xl');
+      editValue.addEventListener('click', function(){
+        editValueAction(booksData);
+      })
 
       const divBtn = document.createElement('div');
       divBtn.classList.add('btn_books');
@@ -308,7 +311,24 @@ function removeBooksShelft(array) {
     console.log( " Ya begitu lah :D ");
 
     // action editvalue 
-    function editValueAction (booksDataArayy){
-      const tergetEdit = findTodoIndex(booksDataArayy)
-      console.log(booksDataArayy);
+    function editValueAction (booksArray___){
+      const targetEdit = booksArray___ ;
+      const findTarget = findTodoIndex(booksArray___)
+
+
+      if(targetEdit.readBooks === true) {
+        const readBooks = document.querySelector('#readBooks');
+        const divContainer = document.querySelector(".booksItem");
+        divContainer.remove()
+
+
+
+        alert('sudah di baca')
+      } else {
+        const unReadBooks = document.querySelector('#unReadBooks')
+
+
+
+        alert('belum di baca')
+      }
     }
