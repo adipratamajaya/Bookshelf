@@ -100,7 +100,7 @@ function makeBooks(booksData) {
       const editValue = document.createElement("i");
       editValue.classList.add("fa-solid","fa-code", 'fa-xl');
       editValue.addEventListener('click', function(){
-        editValueAction(booksData);
+        editValueBooks(booksData);
       })
 
       const divBtn = document.createElement('div');
@@ -126,7 +126,7 @@ function makeBooks(booksData) {
       const editValue = document.createElement("i");
       editValue.classList.add("fa-solid","fa-code", 'fa-xl');
       editValue.addEventListener('click', function(){
-        editValueAction(booksData);
+        editValueBooks(booksData);
       })
 
       const divBtn = document.createElement('div');
@@ -191,60 +191,9 @@ function findeBooks(readBooks){
     return null;
 }
 
-// edit value books
-function editValueBooks(booksData) {
-
-  const arrayBooks = findTodoIndex(booksData)
-
-  // value edit
-  const nameBooksEdit = document.createElement('input')
-  nameBooksEdit.setAttribute('placeholder', `${booksData.name}`)
-
-  const authorBooksedit = document.createElement('input')
-  authorBooksedit.setAttribute('placeholder', `${booksData.author}`)
-
-  const dateBooksEdit = document.createElement('input')
-  dateBooksEdit.setAttribute('placeholder', `${booksData.date}`)
-
-  const submitNewData = document.createElement('input');
-  submitNewData.setAttribute('type', 'submit')
-  // =========
-
-
-  if ( arrayBooks == true) {
-
-    const editMenu = document.createElement('div');
-    editMenu.append(nameBooksEdit, authorBooksedit, dateBooksEdit, submitNewData);
-    editMenu.classList.add('edit_menu');
-
-    // read
-    const read_____ = document.querySelector('#readBooks')
-    read_____.append(editMenu)
-
-    console.log("true")
-
-  } else {
-
-    const editMenu = document.createElement('div');
-    editMenu.append(nameBooksEdit, authorBooksedit, dateBooksEdit, submitNewData);
-    editMenu.classList.add('edit_menu');
-
-    // unread
-    const unRead____ = document.querySelector("#unReadBooks");
-    unRead____.append(editMenu)
-
-    console.log("false")
-  }
-  return;
-}
-
 function removeBooksShelft(array) {
    const todoTarget = findTodoIndex(array);
 
-  //  window.onclick = function() {
-  //   localStorage.removeItem("BOOKS_WEB");
-  //   return '';
-  // };
   
    if (todoTarget === -1) return;
    arrayBooks.splice(todoTarget, 1);
@@ -309,26 +258,3 @@ function removeBooksShelft(array) {
     }
 
     console.log( " Ya begitu lah :D ");
-
-    // action editvalue 
-    function editValueAction (booksArray___){
-      const targetEdit = booksArray___ ;
-      const findTarget = findTodoIndex(booksArray___)
-
-
-      if(targetEdit.readBooks === true) {
-        const readBooks = document.querySelector('#readBooks');
-        const divContainer = document.querySelector(".booksItem");
-        divContainer.remove()
-
-
-
-        alert('sudah di baca')
-      } else {
-        const unReadBooks = document.querySelector('#unReadBooks')
-
-
-
-        alert('belum di baca')
-      }
-    }
