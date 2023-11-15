@@ -99,8 +99,7 @@ footer .media_social_text .social_media a:active {
 
 /* main */
 main {
-    padding: 13%;
-    height: 90%;
+    height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -136,6 +135,7 @@ main {
 .container_books_ {
     border: var(--color-scond) solid 3px;
     padding: 10px;
+    margin-top: 14%;
     border-style: dotted;
     display: flex;
     flex-direction: column;
@@ -143,12 +143,13 @@ main {
     gap: 10px;
     font-family: Roboto;
     overflow: auto;
+    height: fit-content;
+    width: 45vw;
 }
 /* read books  */
 .readBooks___ {
     padding: 15px;
     display: flex;
-    width: 50vw;
     flex-direction: column;
     color: #F7EEBB;
     border-radius: 10px;
@@ -309,11 +310,14 @@ main {
 
 /* froms input books */
 .container {
+    padding-top: 13%;
 }
 .container h2 {
+    text-transform: uppercase;
+    text-align: center;
     color: var(--color-text);
     padding-bottom: 20px;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-family: var(--font-web);
 }
 #input_books {
