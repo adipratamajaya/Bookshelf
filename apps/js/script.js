@@ -106,7 +106,7 @@ function makeNewValue(value){
     date.setAttribute('type', 'date')
     fromInput.appendChild(nama, author, date)
 
-    const div__ = document.createElement('div');
+    const div__ = document.createElement('form');
     div__.appendChild(fromInput);
 
     unReadBooks.appendChild(div__)
