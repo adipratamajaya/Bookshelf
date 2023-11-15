@@ -13,11 +13,8 @@
 
     /* main */
     main {
-        padding: 1px;
-    }
-    main {
+        padding: 15px;
         align-self: center;
-
     }
     body .container_main_page {
         height: 0%;
@@ -44,6 +41,7 @@
     main .container_books_ {
         align-self: center;
         width: 98%;
+        overflow: visible;
     }
     /* btn books */
 
