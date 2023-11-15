@@ -89,6 +89,7 @@ function makeNewValue(value){
     fromInput.appendChild(nama, author, date)
 
     const div__ = document.createElement('form');
+    div__.classList.add('container_box_')
     div__.appendChild(fromInput);
 
     readBooks_.appendChild(div__)
@@ -97,16 +98,18 @@ function makeNewValue(value){
   } else {
     const unReadBooks = document.querySelector('#unReadBooks')
 
-    const fromInput = document.createElement('form')
-    const nama = document.createElement('input')
+
+    const namaBooks = document.createElement('input')
     nama.setAttribute('type', 'text')
-    const author = document.createElement('input')
+    const authorBooks = document.createElement('input')
     author.setAttribute('type', 'text')
-    const date = document.createElement('input')
+    const dateBooks = document.createElement('input')
     date.setAttribute('type', 'date')
+    const fromInput = document.createElement('form')
     fromInput.appendChild(nama, author, date)
 
     const div__ = document.createElement('form');
+    div__.classList.add('container_box_')
     div__.appendChild(fromInput);
 
     unReadBooks.appendChild(div__)
