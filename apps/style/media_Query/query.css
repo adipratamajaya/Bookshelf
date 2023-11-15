@@ -23,6 +23,7 @@
     }
     .container_main_page  main {
     display: flex;
+    height: fit-content;
     flex-direction: column;
     }
     /* main books container */
@@ -41,9 +42,23 @@
     main .container_books_ {
         align-self: center;
         width: 98%;
+        padding-bottom: 50px;
         overflow: visible;
     }
     /* btn books */
+
+    main .btn_books {
+        width: 44px;
+        height: 118px;
+        background-color: #283739;
+        color: #F7EEBB;
+        border: none;
+        flex-direction: column;
+        justify-content: center;
+        gap: 32px;
+        padding-left: 0%;
+        border-radius: 18px;
+    }
 
 
     /* footer */
