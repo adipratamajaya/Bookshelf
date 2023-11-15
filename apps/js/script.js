@@ -88,8 +88,7 @@ function makeNewValue(value){
     date.setAttribute('type', 'date')
     fromInput.appendChild(nama, author, date)
 
-    const div__ = document.createElement('div');
-    div__.classList.add("container_box_")
+    const div__ = document.createElement('form');
     div__.appendChild(fromInput);
 
     readBooks_.appendChild(div__)
@@ -108,7 +107,6 @@ function makeNewValue(value){
     fromInput.appendChild(nama, author, date)
 
     const div__ = document.createElement('div');
-    div__.classList.add("container_box_")
     div__.appendChild(fromInput);
 
     unReadBooks.appendChild(div__)
