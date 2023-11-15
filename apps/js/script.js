@@ -28,6 +28,8 @@ document.addEventListener('DOMContentLoaded', function () {
   
 });
 
+
+
  
 function addBooks () {
    const nameBooks = document.getElementById("nameBooks").value;
@@ -59,6 +61,58 @@ function buildData(name, author, date, readBooks, batchBooks){
       readBooks,
       batchBooks,
    }
+}
+
+function editValueBooks (array){
+  const todoTarget = findTodoIndex(array);
+
+  
+  if (todoTarget === -1) return;
+  arrayBooks.splice(todoTarget, 1);
+  document.dispatchEvent(new Event(books_RENDER));
+
+makeNewValue(array)
+
+
+}
+function makeNewValue(value){
+  if (value.readBooks == true){
+    const readBooks_ = document.querySelector('#readBooks')
+
+    const fromInput = document.createElement('form')
+    const nama = document.createElement('input')
+    nama.setAttribute('type', 'text')
+    const author = document.createElement('input')
+    author.setAttribute('type', 'text')
+    const date = document.createElement('input')
+    date.setAttribute('type', 'date')
+    fromInput.appendChild(nama, author, date)
+
+    const div__ = document.createElement('div');
+    div__.classList.add("container_box_")
+    div__.appendChild(fromInput);
+
+    readBooks_.appendChild(div__)
+
+
+  } else {
+    const unReadBooks = document.querySelector('#unReadBooks')
+
+    const fromInput = document.createElement('form')
+    const nama = document.createElement('input')
+    nama.setAttribute('type', 'text')
+    const author = document.createElement('input')
+    author.setAttribute('type', 'text')
+    const date = document.createElement('input')
+    date.setAttribute('type', 'date')
+    fromInput.appendChild(nama, author, date)
+
+    const div__ = document.createElement('div');
+    div__.classList.add("container_box_")
+    div__.appendChild(fromInput);
+
+    unReadBooks.appendChild(div__)
+  }
 }
 
 function makeBooks(booksData) {

@@ -43,6 +43,7 @@
     }
     main .container_books_ {
         align-self: center;
+        width: 98%;
     }
     /* btn books */
 
