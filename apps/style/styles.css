@@ -10,6 +10,44 @@ html {
     margin: 0;
     padding: 0;
 }
+/* from edit */
+.editValue {
+    background-color: var(--color-frist);
+    padding: 15px;
+    border-radius: 5px;
+    font-family: var(--font-web);
+}
+.editvaluePost {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    gap: 5px;
+    color: var(--color-text);
+}
+.editvaluePost input {
+    height: 35px;
+    border: #283739 1px;
+    background-color: var(--color-bg);
+    border-bottom: var(--color-text) solid 1px;
+    color: #A9C52F;
+    padding: 10px;
+}
+.editvaluePost input:hover {
+    outline: none;
+    color: var(--color-text);
+    background-color: transparent;
+    border-bottom: var(--color-text) solid 1px;
+}
+.btn_valueEdit  {
+    display: flex;
+    gap: 5px;
+    color: var(--color-bg);
+}
+.btn_valueEdit > input {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+/* ===== */
 
 /* color */
 :root {

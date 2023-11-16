@@ -9,8 +9,8 @@ const STORAGE_KEY = 'BOOKS_WEB';
 
 document.addEventListener('DOMContentLoaded', function () {
 
-   if (isStorageExist()) {
-      loadDataFromStorage();
+   if (isStorageExist() ) {
+      loadDataFromStorage() ;
     } 
 
    const submitBooks = document.getElementById('input_data_books');
@@ -61,10 +61,6 @@ function buildData(name, author, date, readBooks, batchBooks){
       readBooks,
       batchBooks,
    }
-}
-
-function editValueBooks (array){
-  const todoTarget = findTodoIndex(array);
 }
 
 function makeBooks(booksData) {
@@ -240,7 +236,7 @@ function removeBooksShelft(array) {
  function loadDataFromStorage() {
    const serializedData = localStorage.getItem(STORAGE_KEY);
    let data = JSON.parse(serializedData);
-  //  actionFound(data);
+ 
   
    if (data !== null) {
      for (const books of data) {
@@ -262,5 +258,3 @@ function removeBooksShelft(array) {
   
       return nameBooks,authorBooks,dateBooks;
     }
-
-    console.log( " Ya begitu lah :D ");
