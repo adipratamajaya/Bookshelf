@@ -145,7 +145,7 @@ document.addEventListener(books_RENDER, function () {
    readBooks.innerHTML = '';
 
    const unReadBooks = document.getElementById('unReadBooks');
-   unReadBooks.innerHTML = '';
+   unReadBooks.innerHTML = "";
   
    for (const booksItems of arrayBooks) {
       const booksElemnts = makeBooks(booksItems);
@@ -157,6 +157,26 @@ document.addEventListener(books_RENDER, function () {
     }
 
  });
+
+//  editValue data 
+function editValueBooks(array) {
+  const arrayDataBooks = findTodoIndex(array);
+  creatValueFrom(arrayDataBooks)
+arrayBooks.splice(arrayDataBooks, 1)
+document.dispatchEvent(new Event(books_RENDER));
+saveData();
+}
+
+function creatValueFrom(array){
+  const divContainer = document.createElement(`div`);
+  divContainer.classList.add(`editValue`);
+  const fromContainer = document.createElement('form');
+  fromContainer.classList.add(`editvaluePost`);
+  const nameBooks = document.createElement(`label`);
+  nameBooks.setAttribute('for', 'namaEdit')
+  const authorBooks = document.createElement(`label`);
+  const dateBooks = document.createElement(`label`);
+}
 
 //  action buttton 
 function readBookShelf (makeBooks) {

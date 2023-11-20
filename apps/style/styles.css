@@ -14,7 +14,7 @@ html {
 .editValue {
     background-color: var(--color-frist);
     padding: 15px;
-    border-radius: 5px;
+    border-radius: 10px;
     font-family: var(--font-web);
 }
 .editvaluePost {
