@@ -161,9 +161,11 @@ document.addEventListener(books_RENDER, function () {
 //  editValue data 
 function editValueBooks(array) {
   const todoTarget = findTodoIndex(array);
-  const divTarget = document.querySelector('.container_box_ ')
-  divTarget.remove(todoTarget)
 
+  
+  if (todoTarget === -1) return;
+  arrayBooks.splice(todoTarget, 1);
+  document.dispatchEvent(new Event(books_RENDER));
   creatValueFrom(array)
 }
 
@@ -202,6 +204,10 @@ const btnSave = document.createElement('input');
 btnSave.setAttribute('type','button')
 btnSave.setAttribute('value','save')
 btnSave.setAttribute('id','savebtnValue')
+btnSave.addEventListener('click', function(){
+  // valueEdit
+  
+})
 
 
 fromDataEdit.append(labelName,inputName,labelAuthor,inputAuthor, labelDate, inputDate, btnSave)
@@ -216,6 +222,8 @@ fromDataEdit.append(labelName,inputName,labelAuthor,inputAuthor, labelDate, inpu
     unReadBooks_false.appendChild(fromDataEdit);
 
   }
+
+  return;
 
 }
 
@@ -257,7 +265,6 @@ function findeBooks(readBooks){
 function removeBooksShelft(array) {
    const todoTarget = findTodoIndex(array);
 
-  
    if (todoTarget === -1) return;
    arrayBooks.splice(todoTarget, 1);
    document.dispatchEvent(new Event(books_RENDER));
