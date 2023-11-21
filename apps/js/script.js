@@ -160,22 +160,63 @@ document.addEventListener(books_RENDER, function () {
 
 //  editValue data 
 function editValueBooks(array) {
-  const arrayDataBooks = findTodoIndex(array);
-  creatValueFrom(arrayDataBooks)
-arrayBooks.splice(arrayDataBooks, 1)
-document.dispatchEvent(new Event(books_RENDER));
-saveData();
+  const todoTarget = findTodoIndex(array);
+  const divTarget = document.querySelector('.container_box_ ')
+  divTarget.remove(todoTarget)
+
+  creatValueFrom(array)
 }
 
 function creatValueFrom(array){
-  const divContainer = document.createElement(`div`);
-  divContainer.classList.add(`editValue`);
-  const fromContainer = document.createElement('form');
-  fromContainer.classList.add(`editvaluePost`);
-  const nameBooks = document.createElement(`label`);
-  nameBooks.setAttribute('for', 'namaEdit')
-  const authorBooks = document.createElement(`label`);
-  const dateBooks = document.createElement(`label`);
+
+//from
+const fromDataEdit = document.createElement('form');
+fromDataEdit.classList.add('dataEditFrom');
+
+// actionValue
+const labelName = document.createElement('label');
+const inputName = document.createElement('input')
+labelName.setAttribute('for','name');
+labelName.innerText = 'Name Books :'
+inputName.setAttribute('type','text')
+inputName.setAttribute('placeholder', `${array.name}`)
+inputName.classList.add('nameBooksValue')
+
+const labelAuthor = document.createElement('label');
+const inputAuthor = document.createElement('input');
+labelAuthor.setAttribute('for','author');
+labelAuthor.innerText = 'Author Books :'
+inputAuthor.setAttribute('type','text');
+inputAuthor.setAttribute('placeholder',`${array.author}`)
+inputAuthor.classList.add('authorBooksValue')
+
+const labelDate = document.createElement('label');
+const inputDate = document.createElement('input');
+labelDate.setAttribute('for','date');
+labelDate.innerText = "Date books :"
+inputDate.setAttribute('type','date');
+inputDate.setAttribute(`value`,`${array.date}`)
+inputDate.classList.add('dateValueBooks')
+
+const btnSave = document.createElement('input');
+btnSave.setAttribute('type','button')
+btnSave.setAttribute('value','save')
+btnSave.setAttribute('id','savebtnValue')
+
+
+fromDataEdit.append(labelName,inputName,labelAuthor,inputAuthor, labelDate, inputDate, btnSave)
+
+  if (array.readBooks == true){
+    const readbooks_true = document.querySelector('#readBooks');
+    readbooks_true.appendChild(fromDataEdit);
+    
+
+  } else {
+    const unReadBooks_false = document.querySelector('#unReadBooks');
+    unReadBooks_false.appendChild(fromDataEdit);
+
+  }
+
 }
 
 //  action buttton 
